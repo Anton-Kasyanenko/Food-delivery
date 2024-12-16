@@ -1,0 +1,13 @@
+import random
+import telebot
+import webbrowser
+from telebot import types
+
+bot = telebot.TeleBot('7073561631:AAHD0Ix6mw6mlTGqI-zJgWtVcLUe3IhEPPw')
+
+answers = ['Я не зрозумів, що ти хочеш сказати.', 'Вибач, я тебе не розумію.', 'Я не знаю такої команди.', 'Мій розробник не говорив, що відповідати в такій ситуації... >_<']
+
+#...
+
+# Рядок, щоб програма не зупинялася
+bot.polling(none_stop=True)

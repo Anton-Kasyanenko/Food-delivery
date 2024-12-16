@@ -1,0 +1,8 @@
+def display_product(message, image_path, description):
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    button1 = types.KeyboardButton('💳 Придбати')
+    button2 = types.KeyboardButton('↩️ Назад')
+    markup.row(button1, button2)
+    file = open(image_path, 'rb')
+    bot.send_photo(message.chat.id, file, reply_markup=markup)
+    bot.send_message(message.chat.id, description, reply_markup=markup)
