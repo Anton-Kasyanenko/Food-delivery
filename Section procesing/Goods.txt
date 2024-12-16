@@ -1,0 +1,12 @@
+def goodsChapter(message):
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    button1 = types.KeyboardButton('🥤 Coca Cola')
+    button2 = types.KeyboardButton('🍔 Burger')
+    button3 = types.KeyboardButton('🥔 Chicken nuggets')
+    button4 = types.KeyboardButton('🍟 French fries')
+    button5 = types.KeyboardButton('↩️ Назад в меню')
+    markup.row(button1, button2)
+    markup.row(button3, button4)
+    markup.row(button5)
+
+    bot.send_message(message.chat.id, 'Ось усі товари, які зараз перебувають у продажу:', reply_markup=markup)
